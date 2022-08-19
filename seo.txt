@@ -1,0 +1,5 @@
+Agregué mixin, extend mapas no llegué.
+Agregue keywords.
+Agregue el favicon.
+algunas cosas rompieron todo, pero pude hacer que funcione.
+Hay mucho para seguir aprendiendo. 

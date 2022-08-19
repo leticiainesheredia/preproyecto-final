@@ -75,7 +75,8 @@ span {
 
     .color-letra {
         font-size: $font-1;
-        @include color-letras;
+        /*@include color;*/
+        /* lo comento porque me tira error y no sé como o que es lo que está mal y no me deja que corra el compilador*/
 
     }
 

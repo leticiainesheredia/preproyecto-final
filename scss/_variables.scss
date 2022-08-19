@@ -6,7 +6,15 @@ $font-1: 20px;
 $height-sitio: 100%;
 $font-nav: rgb(227, 13, 230);
 $lista-colores: (#000000, rgb(245, 150, 150), rgb(159, 242, 159));
-$i: 8em;
+$i: 2px;
+.parrafos {
+    font-size: 16px;
+    color: #000000;
+}
+.parrafos-relatos {
+    @extend .parrafos;
+    background-color: #faebd79e;
+}
 
 
 

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
    * Bootstrap  v5.2.0 (https://getbootstrap.com/)
    * Copyright 2011-2022 The Bootstrap Authors
@@ -8369,6 +8370,13 @@ textarea.form-control-lg {
     display: none !important; } }
 
 /* variables*/
+.parrafos, .parrafos-relatos {
+  font-size: 16px;
+  color: #000000; }
+
+.parrafos-relatos {
+  background-color: #faebd79e; }
+
 * {
   margin: 0;
   padding: 0;
@@ -8428,6 +8436,10 @@ main {
   main div {
     padding: 10px;
     margin: 10px; }
+  @media screen and (max-width: 767px) {
+    main main {
+      display: grid;
+      grid-template-rows: 1fr; } }
 
 footer p {
   background-color: rgba(128, 128, 128, 0.477);
@@ -8480,41 +8492,38 @@ header {
           color: #000000;
           margin: 20px; }
         @media screen and (max-width: 767px) {
-          header nav ul li {
+          header nav ul li nav {
             display: none; }
-            header nav ul li li {
+            header nav ul li nav li {
               display: block; } }
-      header nav ul li:hover {
-        background-color: #caf07e91; }
-
-main {
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  @media screen and (max-width: 767px) {
-    main {
-      display: grid;
-      grid-template-rows: auto; } }
-  main span {
-    font-size: 20px; }
-
-.img-index {
-  display: grid;
-  grid-template-columns: 50% 50%; }
-  @media screen and (max-width: 767px) {
-    .img-index {
-      display: grid;
-      grid-template-rows: auto; } }
-  .img-index .image-center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; }
-
-footer p {
-  background-color: rgba(128, 128, 128, 0.477);
-  font-size: 20px;
-  padding: 20px;
-  margin: 20px; }
+        header nav ul li li:hover {
+          background-color: #caf07e91; }
+  header main {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    header main span {
+      font-size: 20px; }
+    @media screen and (max-width: 767px) {
+      header main main {
+        display: grid;
+        grid-template-rows: 1fr; } }
+  header .img-index {
+    display: grid;
+    grid-template-columns: 50% 50%; }
+    @media screen and (max-width: 767px) {
+      header .img-index {
+        display: grid;
+        grid-template-rows: 1fr; } }
+    header .img-index #image-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+  header footer p {
+    background-color: rgba(128, 128, 128, 0.477);
+    font-size: 20px;
+    padding: 20px;
+    margin: 20px; }
 
 * {
   margin: 0;
@@ -8574,8 +8583,9 @@ main {
   justify-content: center;
   align-items: center; }
   @media screen and (max-width: 767px) {
-    main {
-      display: none; } }
+    main main {
+      display: grid;
+      grid-template-rows: 1fr; } }
   main div {
     padding: 10px;
     margin: 10px;
@@ -8656,6 +8666,10 @@ section {
     animation-name: fade-in;
     animation-duration: 3s;
     transform: translatex(-300px); }
+  @media screen and (max-width: 767px) {
+    section section {
+      display: grid;
+      grid-template-rows: 1fr; } }
 
 footer p {
   background-color: rgba(128, 128, 128, 0.477);
@@ -8690,6 +8704,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover; }
   nav ul {
+    display: flex;
     list-style: none; }
     nav ul li {
       display: inline-block;
@@ -8706,7 +8721,8 @@ nav {
         color: #000000; }
       @media screen and (max-width: 767px) {
         nav ul li {
-          display: none; } }
+          display: grid;
+          grid-template-rows: 1fr; } }
     nav ul li:hover {
       background-color: rgba(244, 223, 67, 0.569); }
 
@@ -8718,7 +8734,8 @@ span h2, span .h2 {
 
 span .color-letra {
   font-size: 20px;
-  color: rgba(230, 36, 78, 0.878); }
+  /*@include color;*/
+  /* lo comento porque me tira error y no sé como o que es lo que está mal y no me deja que corra el compilador*/ }
 
 span .decoration {
   text-decoration: underline; }
@@ -8728,3 +8745,21 @@ footer p {
   font-size: 20px;
   padding: 20px;
   margin: 20px; }
+
+h1, .h1 {
+  font-size: 30px; }
+
+h2, .h2 {
+  font-size: 15px; }
+
+h3, .h3 {
+  font-size: 10px; }
+
+.color-#000000 {
+  background-color: #000000; }
+
+.color-#f59696 {
+  background-color: #f59696; }
+
+.color-#9ff29f {
+  background-color: #9ff29f; }
