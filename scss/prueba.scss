@@ -1,8 +1,21 @@
 @import "../bootstrap/bootstrap.scss";
 @import "variables";
-@import "index";
 @import "relatos";
+@import "index";
 @import "galeria";
 @import "contacto";
 @import "ayuda";
+@for $i from 1 through 3 {
+    h#{$i} {
+        font-size: 24em / $i;
+    }
+}@each $color in $lista-colores {
+    .color-#{$color} {
+        background-color: $color;
+    }
+}
+
+
+
+
 
